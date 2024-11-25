@@ -33,7 +33,7 @@ const Form = () => {
     const submitHandler = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.post("http://localhost:4000/api/form/add", formData);
+            const response = await axios.post("https://form-backend-exjx.onrender.com/api/form/add", formData);
             toast.success("Form submitted successfully!");
             // Reset 
             setFormData({

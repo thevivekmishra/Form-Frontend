@@ -26,7 +26,7 @@ const EditForm = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`http://localhost:4000/api/form/getuser/${id}`);
+                const response = await axios.get(`https://form-backend-exjx.onrender.com/api/form/getuser/${id}`);
                 setFormData(response.data.data); 
             } catch (error) {
                 toast.error('Error fetching form data!');
@@ -47,7 +47,7 @@ const EditForm = () => {
     const submitHandler = async (event) => {
         event.preventDefault();
         try {
-            await axios.put(`http://localhost:4000/api/form/edit/${id}`, formData);
+            await axios.put(`https://form-backend-exjx.onrender.com/api/form/edit/${id}`, formData);
             toast.success('Form updated successfully!');
             navigate('/all'); 
         } catch (error) {

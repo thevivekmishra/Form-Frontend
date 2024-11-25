@@ -15,7 +15,7 @@ const AllFormData = () => {
     useEffect(() => {
         const fetchFormData = async () => {
             try {
-                const response = await axios.get('http://localhost:4000/api/form/all');
+                const response = await axios.get('https://form-backend-exjx.onrender.com/api/form/all');
                 setFormData(response.data.data);
                 setLoading(false);
             } catch (error) {
@@ -29,7 +29,7 @@ const AllFormData = () => {
     // Handle Delete
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:4000/api/form/delete/${id}`);
+            await axios.delete(`https://form-backend-exjx.onrender.com/api/form/delete/${id}`);
             setFormData((prevFormData) => prevFormData.filter((item) => item._id !== id));
             toast.success('Form data deleted successfully!');
         } catch (error) {
