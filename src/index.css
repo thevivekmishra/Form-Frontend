@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active {
+    background-color: #a8e16f;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .active:hover {
+    background-color: #a4d638;
+    transform: translateY(-3px);
+  }
+
+  
+  
